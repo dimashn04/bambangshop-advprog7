@@ -65,11 +65,11 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [v] Commit: `Implement unsubscribe function in Notification controller.`
     -   [v] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
-    -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
-    -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
-    -   [ ] Commit: `Implement publish function in Program service and Program controller.`
-    -   [ ] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [v] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
+    -   [v] Commit: `Implement notify function in Notification service to notify each Subscriber.`
+    -   [v] Commit: `Implement publish function in Program service and Program controller.`
+    -   [v] Commit: `Edit Product service methods to call notify after create/delete.`
+    -   [v] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -91,3 +91,8 @@ This is the place for you to write reflections:
 3. In my opinion, Postman is very useful for testing applications that we have made and seeing whether the application will return a response that matches our expectations based on the requests we make. I can also customize the desired method such as CRUD so that I can see whether the data retrieved is correct or incorrect through Postman.  
 
 #### Reflection Publisher-3
+1. In the case of this tutorial, the push model used can be seen in the algorithm section where when something happens to the object module such as create, delete or update, the notification service will call a method that will iterate through all subscribers to get the latest updates.  
+
+2. If we use the pull method, then each subscriber must determine for themselves whether the data changes that occur are relevant to them. The advantage is that the observer is free to determine what data he will pull and when he will pull it. The disadvantage is that the observer needs to know the structure of the data source in order to do the aforementioned things.  
+
+3. What will happen is in the notificationservice code when the notificationservice needs to notify each subscriber, it will create a long queue if there are a lot of subscribers which makes sending notifications to each subscriber hampered due to the bottle neck of computing capabilities.  
