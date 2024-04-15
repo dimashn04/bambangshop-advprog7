@@ -58,12 +58,12 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [v] Commit: `Implement delete function in Subscriber repository.`
     -   [v] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [v] Commit: `Create Notification service struct skeleton.`
+    -   [v] Commit: `Implement subscribe function in Notification service.`
+    -   [v] Commit: `Implement subscribe function in Notification controller.`
+    -   [v] Commit: `Implement unsubscribe function in Notification service.`
+    -   [v] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [v] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -84,5 +84,10 @@ This is the place for you to write reflections:
 3. Based on my understanding, we need Dashmap instead of Hashmap because dashmap is a built in data structure which is a hashmap suitable for multithreading. In our case, we need it because BambangShop application will use multi threading and the SUBSCRIBER Map will be accessed by many threads. For Singleton, singleton serves to ensure that as long as the program runs there will only be 1 instance of the object. This is useful so that we can always ensure that the list of subscribers to our products is only in 1 dash map and not scattered in various data structures.  
 
 #### Reflection Publisher-2
+1. Service needs to be separated from Repository to fulfill the single responsibility principle. The separation of Service functions for modules that have the function of getting and processing data obtained from the repository while the Repository Layer functions as a layer that is useful for accessing the data base, changing and deleting the contents of the data base. The separation of these two layers helps in the development and maintainability of the code.  
+
+2. If we only use the model layer without other layers, it will create a program that has a high coupling so that if there is a change, it will require a lot of changes to be made to the code.  
+
+3. In my opinion, Postman is very useful for testing applications that we have made and seeing whether the application will return a response that matches our expectations based on the requests we make. I can also customize the desired method such as CRUD so that I can see whether the data retrieved is correct or incorrect through Postman.  
 
 #### Reflection Publisher-3
